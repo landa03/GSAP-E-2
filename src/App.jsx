@@ -1,33 +1,39 @@
-import { useState } from 'react'
+import { useState, useRef} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import gsap from "gsap"
+import { useGSAP } from '@gsap/react';
+import { Timeline } from 'gsap/gsap-core';
+
+
 function App() {
   const [count, setCount] = useState(0)
+  let scrollable1 = useRef();
+  let timeline1 = new.Timeline();
+  let scrollable1Ref = useRef();
+  
+  useGSAP(() => {
+    timeLine1.to(scrollable1Ref.current,{
+      x: promoSegmentWidth, 
+      duration: 3,
+      // delay: 3,
+    }
+  );
+  });
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='scrollable-1'>
+        soy un segmento escroleable, soy el numero 1
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='scrollable-2'>
+        soy un segmento escroleable, soy el numero 2
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='scrollable-3'>
+        soy un segmento escroleable, soy el numero 3
+      </div>
     </>
   )
 }
