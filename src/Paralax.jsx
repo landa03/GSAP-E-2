@@ -51,7 +51,7 @@ export default function Paralax() {
         });
         timeLine1.to(paralaxRef.current,{
             scrollTrigger:{
-                trigger: ".paralax-boy",
+                trigger: ".paralaxCont",
                 // trigger: paralaxRef.current,
                 start: "top bottom",
                 end: "bottom top",
@@ -66,7 +66,7 @@ export default function Paralax() {
 
     return(
         <>
-            <div style={paralaxContStyle}>
+            <div className='paralaxCont' style={paralaxContStyle}>
                 <div className='paralax-boy' style={paralaxBoyStyle} ref={paralaxRef}>
                     <div style={paralaxStyle1}></div>
                     <div style={paralaxStyle2}></div>
