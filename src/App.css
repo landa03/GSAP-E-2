@@ -1,3 +1,7 @@
+#dooky{
+    height: 700px;
+}
+
 .scrollable-1{
  height: 200px;
  width: 60%;
@@ -5,8 +9,11 @@
  align-items: center;
  justify-content: center;
  background-color: rgb(80, 80, 85);
+ /* background-color; */
  border-radius: 20px;
  margin: 50px;
+ /* flex-direction: column; */
+ /* overflow: hidden; */
 }
 .scrollable-2{
  height: 200px;
